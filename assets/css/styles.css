@@ -504,7 +504,7 @@ img {
 
 .certificate {
     flex: 0 0 auto;
-    width: 300px; /* Adjust the width of each certificate card */
+    width: 50px; /* Adjust the width of each certificate card */
     margin-right: 20px;
     scroll-snap-align: start;
 }
