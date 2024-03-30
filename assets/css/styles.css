@@ -489,38 +489,33 @@ img {
 
 /* =====CERTIFICATE=====*/
 .certificates {
-    padding: 50px 0;
-    background-color: #f9f9f9;
+    position: relative;
+    overflow-x: auto;
 }
 
 .certificates__container {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
 }
 
-.certificate {
+.slides {
+    display: flex;
+    animation: slideAnimation 10s infinite; /* Adjust animation duration */
+}
+
+.slides img {
     flex: 0 0 auto;
-    width: 50px; /* Adjust the width of each certificate card */
-    margin-right: 20px;
-    scroll-snap-align: start;
-}
-
-.certificate:last-child {
-    margin-right: 0;
-}
-
-.certificate img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    margin-right: 20px;
 }
 
-/* Hide scrollbar for Chrome, Safari, and Opera */
-.certificates__container::-webkit-scrollbar {
-    display: none;
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
+
 
