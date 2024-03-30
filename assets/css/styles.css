@@ -490,16 +490,15 @@ img {
 /* =====CERTIFICATE=====*/
 .certificates {
     position: relative;
-    overflow-x: auto;
+    overflow: hidden;
 }
 
 .certificates__container {
-    display: flex;
+    overflow-x: hidden;
 }
 
 .slides {
     display: flex;
-    animation: slideAnimation 10s infinite; /* Adjust animation duration */
 }
 
 .slides img {
@@ -509,13 +508,24 @@ img {
     margin-right: 20px;
 }
 
-@keyframes slideAnimation {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
 }
 
 
