@@ -57,14 +57,5 @@ sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
 
-/*===== certificates =====*/
-function scrollSlides(direction) {
-    const container = document.querySelector('.certificates__container');
-    const scrollAmount = 300; // Adjust this value to control scroll distance
-    if (direction === -1) {
-        container.scrollBy(-scrollAmount, 0);
-    } else if (direction === 1) {
-        container.scrollBy(scrollAmount, 0);
-    }
-}
+
 
