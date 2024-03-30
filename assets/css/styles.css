@@ -519,3 +519,48 @@ img {
 
 
 
+
+/*CERTIFICATES*/
+.certificates {
+    position: relative;
+    overflow: hidden;
+}
+
+.certificates__container {
+    overflow-x: hidden;
+}
+
+.slides {
+    display: flex;
+}
+
+.slides img {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+
+
