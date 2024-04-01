@@ -69,3 +69,50 @@ function scrollSlides(direction) {
 
 
 
+
+
+/*===== FORM CONTACT =====*/
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    var formData = new FormData(this);
+
+    // Send form data to server-side script
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "assets\php\send_email.php"); // Replace "send_email.php" with your server-side script URL
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                alert("Email sent successfully!");
+                // Clear form fields
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+            } else {
+                alert("Failed to send email. Please try again later.");
+            }
+        }
+    };
+    xhr.send(formData);
+});
+
+
+
+// SKILL
+const slider = document.querySelector('.slider');
+
+let slidePosition = 0;
+
+function moveToNextSlide() {
+  if (slidePosition === -100) {
+    slidePosition = 0;
+  } else {
+    slidePosition -= 25;
+  }
+  slider.style.transform = `translateX(${slidePosition}%)`;
+}
+
+setInterval(moveToNextSlide, 3000); // Auto slide every 3 seconds
+

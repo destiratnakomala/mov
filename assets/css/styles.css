@@ -499,11 +499,11 @@ img {
 
 .slides {
     display: inline-block;
-    animation: slideAnimation 10s linear infinite; /* Adjust duration as needed */
+    animation: slideAnimation 30s linear infinite; /* Adjust duration as needed */
 }
 
 .slides img {
-    width: 100%;
+    width: auto;
     height: auto;
     margin-right: 20px; /* Adjust spacing between images */
 }
@@ -536,8 +536,8 @@ img {
 
 .slides img {
     flex: 0 0 auto;
-    width: 100%;
-    height: auto;
+    width: 25%;
+    height: 25%;
     margin-right: 20px;
 }
 
@@ -564,3 +564,191 @@ img {
 
 
 
+
+
+
+
+
+
+
+/* ===== CONTACT FORM ===== */
+#contactForm {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 360px;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#contactForm textarea {
+  height: 120px;
+}
+
+#contactForm button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4c54af;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background-color: #454ba0;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm textarea:focus {
+  outline: none;
+  border-color: #4e4caf;
+}
+
+
+
+
+/*************************TIMELINE*/
+* {
+	box-sizing: border-box;
+}
+body {
+	background: #ffffff;
+}
+.container {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.single-box {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	width: 100%;
+}
+.date-area {
+	display: flex;
+	background: linear-gradient(to right, #ffffff 45%, #000 45%, #000 45%, #ffffff 50%);
+	order: 2;
+	text-align: center;
+	color: #fff;
+	font-size: 28px;
+	flex-basis: 100px;
+}
+.date-area>span {
+	font-size: 20px;
+	line-height: 70px;
+	margin: auto;
+	background: #325efc;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+}
+.content {
+	text-align: center;
+	padding: 20px;
+	border-radius: 25px;
+	color: #1565ee;
+	order: 3;
+	width: 80%;
+	padding-left: 10px;
+	background: #fff;
+}
+.content {
+	margin-bottom: 3%;
+}
+.content h2 {
+	margin: 0;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.content h3 {
+	margin: 5px;
+	font-size: 14px;
+	color: #211e1e;
+}
+@media (min-width: 640px) {
+	.content, .custom {
+		width: 40%;
+	}
+	.box-right .content {
+		order: 1;
+		padding-right: 10px;
+		border-radius: 25px;
+	}
+	.box-right .custom {
+		order: 3;
+	}
+}
+
+/* SKILLS */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.slider {
+  display: flex;
+  animation: slideAnimation 30s linear infinite;
+  position: relative;
+}
+
+.logo {
+  height: 50px; /* Adjust the height of the icons as needed */
+  margin: 10px;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* SKILSTOPIC */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.box {
+  width: 30%;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}
+.box h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+.tools-list {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+  display: flex; /* Display items horizontally */
+  justify-content: center; /* Center items horizontally */
+}
+.tools-list .logo {
+  margin-right: 10px; /* Add some space between the logos */
+  width: 40px; /* Set width of the logos */
+  height: auto; /* Maintain aspect ratio */
+}
