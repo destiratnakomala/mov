@@ -752,3 +752,12 @@ body {
   width: 40px; /* Set width of the logos */
   height: auto; /* Maintain aspect ratio */
 }
+
+
+
+/* skills */
+.logo-text {
+  font-size: smaller;
+  font-weight: bold;
+}
+}
