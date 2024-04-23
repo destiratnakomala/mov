@@ -55,17 +55,14 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+ 
 
-/*CERTIFICATES*/
-function scrollSlides(direction) {
-    const container = document.querySelector('.certificates__container');
-    const scrollAmount = 300; // Adjust this value to control scroll distance
-    if (direction === -1) {
-        container.scrollBy(-scrollAmount, 0);
-    } else if (direction === 1) {
-        container.scrollBy(scrollAmount, 0);
-    }
-}
+
+
+
+
+
+
 
 
 
@@ -116,3 +113,56 @@ function moveToNextSlide() {
 
 setInterval(moveToNextSlide, 3000); // Auto slide every 3 seconds
 
+
+// tools
+// Initialize ScrollReveal
+ScrollReveal().reveal('.box', {
+    delay: 300, // Delay before the reveal animation starts (in milliseconds)
+    duration: 1000, // Duration of the reveal animation (in milliseconds)
+    origin: 'bottom', // The origin of the animation ('top', 'right', 'bottom', 'left')
+    distance: '20px', // Distance of the animation (in pixels)
+    easing: 'ease', // Easing function ('linear', 'ease', 'ease-in', 'ease-out', 'ease-in-out')
+    reset: true // Whether to reset the animation after it's been revealed
+});
+
+
+
+
+
+
+
+// work
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(n) {
+  slides.forEach(slide => slide.style.display = 'none');
+  slides[n].style.display = 'block';
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+
+
+const prevArrow = document.querySelector('.prev');
+const nextArrow = document.querySelector('.next');
+// Wait for the DOM content to load
+document.addEventListener('DOMContentLoaded', function() {
+    // Target the arrow elements
+    const prevArrow = document.querySelector('.prev');
+    const nextArrow = document.querySelector('.next');
+
+    // Add event listeners to arrow buttons
+    prevArrow.addEventListener('click', prevSlide);
+    nextArrow.addEventListener('click', nextSlide);
+});
